@@ -1,12 +1,11 @@
 /* Home */
 #home {
     display: flex;
-    min-height: calc(100vh - 92px);
     position: relative;
 }
 
 #cta {
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -46,7 +45,7 @@
 }
 
 #banner img {
-    height: 650px;
+    height: max-content;
     width: fit-content;
     border-radius: 50px;
 }

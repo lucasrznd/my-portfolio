@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/header.css" />
     <link rel="stylesheet" type="text/css" href="src/css/home.css" />
     <link rel="stylesheet" type="text/css" href="src/css/stacks.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/projects.css" />
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" />
@@ -158,6 +159,74 @@
                 </div>
             </div>
         </section>
+
+        <section id="projects">
+            <h2 class="section-title">Projetos</h2>
+
+            <div id="projects-container">
+                <div class="project">
+                    <img src="src/img/projects/gspot.png" class="project-image" alt="API de Gerenciamento de SPOTS">
+                    <div class="project-hover">
+                        <h3 class="project-title">Software de Gerenciamento de SPOTS</h3>
+                        <p class="project-description">
+                            Software com backend em <strong>Java</strong> com <strong>Spring Boot</strong> e front-end
+                            em <strong>ReactJS</strong> para gerenciar gravações
+                            curtas (SPOTS)
+                            vendidas por uma rádio.
+                        </p>
+                        <div class="github-links">
+                            <a href="https://github.com/lucasrznd/api-gspot" target="_blank">
+                                <i class="fa-brands fa-java"></i>
+                            </a>
+
+                            <a href="https://github.com/lucasrznd/frontend-gspot" target="_blank">
+                                <i class="fa-brands fa-react"></i>
+                            </a>
+                        </div>
+                        <button class="image-viewer-btn">Ver Imagem</button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" class="project-image" alt="Projeto 2">
+                    <div class="project-hover">
+                        <h3 class="project-title">Projeto 2</h3>
+                        <p class="project-description">
+                            Descrição do projeto
+                        </p>
+                        <button class="image-viewer-btn">Ver Imagem</button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" class="project-image" alt="Projeto 3">
+                    <div class="project-hover">
+                        <h3 class="project-title">Projeto 3</h3>
+                        <p class="project-description">
+                            Descrição do projeto
+                        </p>
+                        <button class="image-viewer-btn">Ver Imagem</button>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" class="project-image" alt="Projeto 4">
+                    <div class="project-hover">
+                        <h3 class="project-title">Projeto 4</h3>
+                        <p class="project-description">
+                            Descrição do projeto
+                        </p>
+                        <button class="image-viewer-btn">Ver Imagem</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para visualização da imagem -->
+        <div id="image-viewer" class="image-viewer">
+            <span id="close-viewer">&times;</span>
+            <img id="image-viewer-img" src="" alt="Imagem do projeto">
+        </div>
     </main>
 
     <script src="src/js/script.js"></script>

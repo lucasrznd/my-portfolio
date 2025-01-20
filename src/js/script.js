@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const viewer = document.getElementById("image-viewer");
 const viewerImage = document.getElementById("image-viewer-img");
 const closeViewer = document.getElementById("close-viewer");
-const viewerButtons = document.querySelectorAll(".image-viewer-btn");
+const viewerButtons = document.querySelectorAll(".project-button");
 
 // Adiciona evento de clique aos botões "Ver imagem"
 viewerButtons.forEach((button) => {

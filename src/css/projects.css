@@ -20,59 +20,118 @@
     border-radius: 20px;
     gap: 18px;
     width: 25%;
-    padding: 20px;
-    background-color: var(--color-primary-1);
-    color: white;
+    padding: 0;
+    background-color: var(--color-neutral-0);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    transition: filter 0.3s, transform 0.3s;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.project-hover {
+.project-image-container::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     opacity: 0;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
     z-index: 1;
 }
 
-.project:hover .project-hover {
+.project-image-container:hover .project-image {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+.project-image-container:hover::before {
+    opacity: 0.6;
+}
+
+.project-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-primary-6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.project-image-container:hover .project-button {
+    display: block;
     opacity: 1;
 }
 
-.project:hover .project-image {
-    filter: brightness(50%) blur(2px);
-    transform: scale(1.1);
-}
-
-.github-links {
-    margin-top: 10px;
+.project-heart {
+    position: absolute;
+    background-color: var(--color-primary-6);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.563rem;
+    color: var(--color-primary-1);
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-description {
+    color: #434343;
+    text-align: center;
+}
+
+.project-rate i {
+    color: var(--color-primary-6);
+}
+
+.project-price {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.github-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .github-links a {
-    color: white;
+    color: var(--color-primary-1);
     font-size: 1.7rem;
     margin-left: 20px;
 }
@@ -140,7 +199,7 @@
 }
 
 @media screen and (max-width: 1170px) {
-    #projects-container {
+    #projectes {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -155,7 +214,7 @@
         width: 100%;
     }
 
-    #projects .section-title {
+    #menu .section-subtitle {
         text-align: center;
     }
 }

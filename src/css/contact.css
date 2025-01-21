@@ -1,0 +1,143 @@
+/* Estilização da seção de contato */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.section-description {
+    font-size: 1rem;
+    color: #1d1d1dad;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    max-width: 800px; 
+    width: 100%; 
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do Switch */
+.form-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.switch-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #ddd;
+}
+
+.switch-btn.active {
+    background-color: var(--color-primary-2);
+}
+
+#whatsapp-switch.active {
+    background-color: #25D366; /* Cor verde do WhatsApp */
+}
+
+.switch-btn i {
+    margin-right: 5px;
+}
+
+/* Estilo dos formulários */
+.contact-form {
+    display: none;
+}
+
+.contact-form.active {
+    display: block;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%; 
+    max-width: 100%; 
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--color-primary-1);
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--color-primary-2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--color-primary-1);
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%; 
+    }
+
+    .switch-btn {
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        width: 95%; 
+    }
+}

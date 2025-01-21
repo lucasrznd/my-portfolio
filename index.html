@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="src/css/home.css" />
     <link rel="stylesheet" type="text/css" href="src/css/stacks.css" />
     <link rel="stylesheet" type="text/css" href="src/css/projects.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/contact.css" />
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" />
@@ -267,6 +268,60 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-description">
+                Escolha como prefere entrar em contato: via e-mail ou WhatsApp!
+            </p>
+            <div class="contact-container">
+                <!-- Switch para alternar entre formulários -->
+                <div class="form-switch">
+                    <button id="email-switch" class="switch-btn active" data-form="email-form">
+                        <i class="fas fa-envelope"></i> E-mail
+                    </button>
+                    <button id="whatsapp-switch" class="switch-btn" data-form="whatsapp-form">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                </div>
+
+                <!-- Formulário de e-mail -->
+                <form id="email-form" class="contact-form active"
+                    action="https://formsubmit.co/a5e4c83eae2272def6f125e98ead17cb" method="post">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Digite o assunto" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar Mensagem</button>
+                </form>
+
+                <!-- Formulário de WhatsApp -->
+                <form id="whatsapp-form" class="contact-form" action="https://wa.me/SEU_NUMERO_AQUI" method="get">
+                    <div class="form-group">
+                        <label for="whatsapp-message">Mensagem</label>
+                        <textarea id="whatsapp-message" name="text" rows="5"
+                            placeholder="Digite sua mensagem para enviar no WhatsApp" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar via WhatsApp</button>
+                </form>
             </div>
         </section>
 

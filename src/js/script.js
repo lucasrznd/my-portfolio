@@ -18,29 +18,49 @@ document.addEventListener("DOMContentLoaded", function () {
 const viewer = document.getElementById("image-viewer");
 const viewerImage = document.getElementById("image-viewer-img");
 const closeViewer = document.getElementById("close-viewer");
-const viewerButtons = document.querySelectorAll(".project-button");
+const prevButton = document.getElementById("prev-image");
+const nextButton = document.getElementById("next-image");
 
-// Adiciona evento de clique aos botões "Ver imagem"
-viewerButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-        const projectCard = event.target.closest(".project");
-        const projectImage = projectCard.querySelector(".project-image").src;
+let currentImageIndex = 0;
+let images = [];
 
-        viewerImage.src = projectImage;
-        viewer.classList.add("show"); 
+// Adiciona evento de clique aos botões "Ver imagens"
+document.querySelectorAll(".project").forEach((project) => {
+    const viewButton = project.querySelector(".project-button"); // Botão "Ver imagem"
+    viewButton.addEventListener("click", () => {
+        images = Array.from(project.querySelectorAll(".project-image")).map(img => img.src); // Coleta todas as imagens do projeto
+        currentImageIndex = 0; // Reinicia o índice
+        updateImageViewer(); // Atualiza o modal
+        viewer.classList.add("show");
     });
 });
 
-// Evento para fechar o modal
-closeViewer.addEventListener("click", () => {
-    viewer.classList.remove("show"); // Remove a classe para fechar com animação
-    viewerImage.src = ""; // Limpa a imagem para evitar carregamentos desnecessários
+// Atualiza a imagem exibida
+function updateImageViewer() {
+    viewerImage.src = images[currentImageIndex];
+}
+
+// Botões de navegação
+prevButton.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImageViewer();
 });
 
-// Fecha o modal ao clicar fora da imagem
+nextButton.addEventListener("click", () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImageViewer();
+});
+
+// Fecha o modal
+closeViewer.addEventListener("click", () => {
+    viewer.classList.remove("show");
+    viewerImage.src = "";
+});
+
+// Fecha ao clicar fora da imagem
 viewer.addEventListener("click", (event) => {
     if (event.target === viewer) {
-        viewer.classList.remove("show"); // Remove a classe para fechar com animação
+        viewer.classList.remove("show");
         viewerImage.src = "";
     }
 });

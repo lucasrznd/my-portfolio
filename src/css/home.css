@@ -1,6 +1,7 @@
 /* Home */
 #home {
     display: flex;
+    min-height: calc(100vh - 92px);
     position: relative;
 }
 

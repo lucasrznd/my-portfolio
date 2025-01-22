@@ -3,7 +3,9 @@
     display: flex;
     min-height: calc(100vh - 92px);
     position: relative;
-}
+    align-items: flex-start;
+    padding-top: 5%;
+  }
 
 #cta {
     width: 40%;
@@ -18,6 +20,7 @@
 #cta .title {
     font-size: 4rem;
     color: var(--color-neutral-9);
+    text-wrap: nowrap;
 }
 
 #cta .title span {
@@ -62,15 +65,22 @@
 
 #banner {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: end;
     width: 60%;
-}
+    height: fit-content;
+  }
 
 #banner img {
     height: max-content;
     width: fit-content;
     border-radius: 50px;
+}
+
+@media screen and (max-width: 1300px) {
+    #cta .title {
+        font-size: 3.3rem;
+    }
 }
 
 @media screen and (max-width: 1170px) {
@@ -92,6 +102,11 @@
 }
 
 @media screen and (max-width: 600px) {
+    #cta .title {
+        font-size: 2.5rem;
+        text-wrap: wrap;
+    }
+
     #cta .description {
         font-size: 1rem;
     }

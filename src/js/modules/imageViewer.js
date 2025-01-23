@@ -10,7 +10,7 @@ export function initImageViewer() {
     let images = [];
 
     document.querySelectorAll(".project").forEach((project) => {
-        const viewButton = project.querySelector(".project-button");
+        const viewButton = project.querySelector(".project-image-container");
         viewButton.addEventListener("click", () => {
             images = Array.from(project.querySelectorAll(".project-image")).map(img => img.src);
             currentImageIndex = 0;

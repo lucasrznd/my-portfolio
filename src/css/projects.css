@@ -39,6 +39,7 @@
     overflow: hidden;
     border-radius: 20px 20px 0 0;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .project-image {
@@ -80,7 +81,7 @@
     color: var(--color-neutral-0);
     padding: 10px 20px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 1.4rem;
     border: none;
     cursor: pointer;
     z-index: 2;

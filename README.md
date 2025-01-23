@@ -11,6 +11,29 @@
 
 Este é um projeto de landing page pessoal desenvolvido utilizando HTML, CSS e JavaScript. O objetivo da página é apresentar informações profissionais e projetos desenvolvidos, oferecendo uma visão clara das minhas habilidades como desenvolvedor.
 
+<h2 id="installation">🛠️ Instalação</h2>
+
+1. Clone o repositório para o seu ambiente local:
+```
+https://github.com/lucasrznd/my-portfolio
+```
+
+2. Navegue até o diretório do projeto:
+```
+cd my-portfolio
+```
+
+<h2 id="usage">🚀 Como Usar</h2>
+
+1. Abra o arquivo `index.html` diretamente no navegador:
+   - No Windows: clique duas vezes no arquivo.
+   - No Mac/Linux: clique com o botão direito no arquivo e escolha "Abrir com" > "Navegador".
+
+2. **(Opcional)** Use o Live Server do VS Code:
+   - Instale a extensão [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no VS Code.
+   - Abra o projeto no VS Code.
+   - Clique com o botão direito no arquivo `index.html` e escolha **Open with Live Server**.
+
 <h2 id="author">👨🏻‍💻 Autor</h2>
 
 <table>

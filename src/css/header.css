@@ -27,7 +27,7 @@ header {
 
 .nav-item a {
     text-decoration: none;
-    color: #1d1d1dad;
+    color: var(--color-neutral-10);
     font-weight: 600;
 }
 

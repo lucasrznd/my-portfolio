@@ -12,7 +12,9 @@
 
     --color-neutral-0: #fff;
     --color-neutral-1: #f4f4f4;
+    --color-neutral-2: #f9f9f9;
     --color-neutral-9: #1d1d1d;
+    --color-neutral-10: #1d1d1dad;
 }
 
 * {
@@ -67,7 +69,7 @@ section {
     font-size: 1.40rem;
     border-radius: 10px;
     text-decoration: none;
-    color: white;
+    color: var(--color-neutral-0);
     transition: 0.3s ease;
 }
 
